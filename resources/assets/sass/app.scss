@@ -1,0 +1,93 @@
+// Fonts
+// @import "url(https://fonts.googleapis.com/css?family=Raleway:300, 400, 600)";
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Custom CSS
+@import "custom";
+
+.well {
+  width: 40%;
+  height: 100%;
+  margin-bottom: 50px;
+  position: relative;
+  .post-image {
+    overflow: hidden;
+    img {
+      height: 300px;
+      background-position: center;
+      object-fit: cover;
+      transition: 0.5s ease;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+  .edit-span {
+    background: #57b894;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 25px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    a {
+      margin-top: 50%;
+      transform: translateY(-50%);
+      color: white;
+    }
+  }
+}
+.post-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.pagination {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro-image {
+  width: 100%;
+  height: 600px;
+}
+.intro-login {
+  position: absolute;
+  left: 50%;
+  bottom: 260px;
+  transform: translateX(-50%);
+  .login {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+  }
+  .register {
+    background-color: #57b894;
+    border-color: #57b894;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .post-grid {
+    flex-direction: column;
+  }
+  .well {
+    width: 100%;
+  }
+
+  .intro-login {
+    display: flex;
+    flex-direction: row;
+    a {
+      margin: 10px;
+    }
+  }
+}
